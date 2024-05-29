@@ -1,21 +1,9 @@
-import { useEffect, useState } from "react";
-import { getGifs } from "../helpers/getGifs";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./GifItem";
 
 export const GifGrid = ({ categoryGifExpertAppProp }) => {
 
-
-   const [ images, setImages ] = useState([]);
-
-   const getImages = async() => {
-      const newImages = await getGifs( categoryGifExpertAppProp );
-      setImages( newImages );
-   };
-
-   useEffect( () => {
-      getImages();
-   }, [])
-
+   const { images, isLoading } = useFetchGifs( categoryGifExpertAppProp );
 
    return (
       <>
