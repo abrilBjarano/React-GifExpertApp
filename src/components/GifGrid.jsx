@@ -21,6 +21,8 @@ export const GifGrid = ({ categoryGifExpertAppProp }) => {
       <>
          <h3>{ categoryGifExpertAppProp }</h3>
 
+         <br /><br />
+
          <div className="card-grid">
             { images.map( ( image ) => (
                <GifItem 
