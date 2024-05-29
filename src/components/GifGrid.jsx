@@ -8,6 +8,8 @@ export const GifGrid = ({ categoryGifExpertAppProp }) => {
    return (
       <>
          <h3>{ categoryGifExpertAppProp }</h3>
+         
+         { isLoading && <h2> Cargando...</h2> }
 
          <br /><br />
 
